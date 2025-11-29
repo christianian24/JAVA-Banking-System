@@ -14,41 +14,32 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.release>17</maven.compiler.release>
         <javafx.version>21.0.5</javafx.version>
-        <!-- must be set when running: -Djavafx.platform=linux|win|mac -->
-        <javafx.platform>${javafx.platform}</javafx.platform>
+        <!-- Default to Windows so mvn commands work out-of-the-box on your machine -->
+        <javafx.platform>win</javafx.platform>
         <gson.version>2.10.1</gson.version>
         <slf4j.version>2.0.12</slf4j.version>
         <logback.version>1.4.14</logback.version>
         <lombok.version>1.18.30</lombok.version>
     </properties>
 
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>org.openjfx</groupId>
-                <artifactId>javafx-bom</artifactId>
-                <version>${javafx.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
-
     <dependencies>
-        <!-- JavaFX (platform-specific classifier required) -->
+        <!-- JavaFX (explicit version + platform classifier) -->
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-controls</artifactId>
+            <version>${javafx.version}</version>
             <classifier>${javafx.platform}</classifier>
         </dependency>
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-graphics</artifactId>
+            <version>${javafx.version}</version>
             <classifier>${javafx.platform}</classifier>
         </dependency>
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-fxml</artifactId>
+            <version>${javafx.version}</version>
             <classifier>${javafx.platform}</classifier>
         </dependency>
 
@@ -127,9 +118,7 @@
                 <executions>
                     <execution>
                         <phase>package</phase>
-                        <goals>
-                            <goal>shade</goal>
-                        </goals>
+                        <goals><goal>shade</goal></goals>
                         <configuration>
                             <createDependencyReducedPom>false</createDependencyReducedPom>
                             <transformers>
