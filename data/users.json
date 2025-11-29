@@ -1,0 +1,21 @@
+{
+  "U-ADMIN": {
+    "id": "U-ADMIN",
+    "username": "admin",
+    "displayName": "System Administrator",
+    "passwordHash": "$2a$10$oTC.AOmuPdxDdOVIfh1C6exy3WWyqo/BTfPMfLX7Xttif28NneuCu",
+    "role": "ADMIN",
+    "active": true,
+    "mfaEnabled": false,
+    "loginHistory": [
+      "2025-11-29T07:21:10.284446800Z|local",
+      "2025-11-29T07:21:12.579668500Z|local",
+      "2025-11-29T07:22:50.203742400Z|local",
+      "2025-11-29T07:22:51.247698500Z|local",
+      "2025-11-29T07:22:51.831634900Z|local",
+      "2025-11-29T07:23:21.032830100Z|local",
+      "2025-11-29T07:23:33.049411700Z|local",
+      "2025-11-29T07:23:33.959600300Z|local"
+    ]
+  }
+}

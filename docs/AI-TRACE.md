@@ -1,0 +1,1 @@
+Generated with assistance from an AI coding system. Prompt required a JavaFX MVC desktop banking app with Reserve system, security, and documentation. Output curated and verified by a senior engineer.
