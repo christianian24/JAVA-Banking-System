@@ -1,0 +1,10 @@
+target/
+*.class
+*.log
+/.idea/
+/.vscode/
+/out/
+*.iml
+.DS_Store
+data/.gitkeep
+logs/.gitkeep
